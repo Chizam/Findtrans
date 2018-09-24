@@ -3,7 +3,9 @@
 namespace Findtrans\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Findtrans\Addroute;
 
+use Findtrans\Trip;
 class HomeController extends Controller
 {
     /**
@@ -22,7 +24,20 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        return view('home');
+        $search = request()->search;
+
+        if($search) {
+            $trips = Trip::where('from', 'LIKE', '%'. $search . '%')
+                    ->orWhere('to', 'LIKE', '%'. $search . '%')
+                    ->paginate(4);
+        } else {
+            $trips = Trip::latest()->paginate(5);            
+        }
+        return view('home')->with('trips', $trips);
+                            
+
+       
     }
 }

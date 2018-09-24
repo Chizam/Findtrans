@@ -831,7 +831,11 @@ section {
 }
 
 .au-btn--submit:hover {
-    background: #3868cd;
+        background: #0b3800;
+}
+
+.au-btn--submit {
+        background: #0b3800;
 }
 
 .au-btn--submit > i {
@@ -1572,7 +1576,7 @@ section {
     left: 0;
     top: 0;
     bottom: 0;
-    background: #fff;
+    background: #0b3800;
     overflow-y: auto;
 }
 

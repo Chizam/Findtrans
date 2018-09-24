@@ -4,11 +4,12 @@ namespace Findtrans\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Findtrans\Addroute;
+use Findtrans\Trip;
 
 class AddrouteController extends Controller
 {
-  public function show(){
-    	return view('addroute');
+    public function show(){
+    	return view('addroute')->with('routes', Addroute::all());
     }
 
     public function add_journey(){
@@ -30,8 +31,8 @@ class AddrouteController extends Controller
 
     	$route->save();
 
-        $routes=  Addroute::all();
-    	return view('home')->with('routes', $routes);
+    	return view('home')->with('routes', Addroute::all())
+                            ->with('trips', Trip::paginate(5));
 
     }
 

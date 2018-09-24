@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomesController@index');
 
 Auth::routes();
 
@@ -29,6 +27,17 @@ Route::prefix('admin')
     ->namespace('Admin')
     ->group(function() {
     Route::resource('cities', 'CitiesController');
+    Route::resource('trips', 'TripsController');
+    Route::get('search', 'TripsController@search')->name('trips.search'); 
 });
 
 
+Route::get('booking/show', [
+	'uses' => 'BookingController@index',
+	'as' => 'booking.show'
+	]);
+
+Route::post('booking/store', [
+	'uses' => 'BookingController@store',
+	'as' => 'booking.store'
+	]);

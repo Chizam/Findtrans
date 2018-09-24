@@ -61,6 +61,8 @@
                                     @endif
                                 </div>
 
+                                
+
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input class="au-input au-input--full{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" placeholder="Password" required>

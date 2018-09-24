@@ -18,7 +18,8 @@ class CreateTripsTable extends Migration
             $table->integer('tickets');
             $table->string('from');
             $table->string('to');
-            $table->time('departure_time');
+            $table->string('price');
+            $table->enum('departure_time', ['7:00 Am', '12:30 Pm', '6:00 Pm', '9:00 Pm']);
             $table->date('departure_date');
 
             $table->timestamps();

@@ -5,6 +5,7 @@ namespace Findtrans\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Findtrans\Http\Controllers\Controller;
 use Findtrans\City;
+use Findtrans\Addroute;
 
 class CitiesController extends Controller
 {
@@ -46,7 +47,7 @@ class CitiesController extends Controller
 
         $route->save();
 
-        return view('home');
+         return redirect()->back()->with('status', 'city added!');
 
     
     }
