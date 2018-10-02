@@ -87,7 +87,7 @@
                             </div>
 
                             <div class=" text-center">
-                            <input type="submit" value="Add Details" class="btn btn-success btn-lg" name="">
+                            <input type="submit" value="Add Trip" class="btn btn-success btn-lg" name="">
                             </div> 
                         </form>
                         

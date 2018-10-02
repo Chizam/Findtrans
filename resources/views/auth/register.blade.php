@@ -32,7 +32,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <h2> FINDTRANS</h2>
+                                <h2 style="color: #fff;"> FINDTRANS</h2>
                             </a>
                         </div>
                         <div class="login-form">
@@ -80,8 +80,9 @@
                                 <label for="password-confirm">Confirm Password</label>
                                 <input type="password" class="au-input au-input--full" name="password_confirmation" required>
                                 </div>
-
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Register</button>
+                                <div class="text-center ">
+                                <button class="au-btn au-btn--green m-b-20" type="submit">Register</button>
+                                </div>
                                 <!-- <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">Register With Facebook</button>

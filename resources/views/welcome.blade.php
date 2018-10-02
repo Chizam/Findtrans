@@ -29,9 +29,9 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <nav class="navbar navbar-expand-lg table-light fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Findtrans</a>
+        <a class="navbar-brand js-scroll-trigger text-dark" href="#page-top">Findtrans</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -39,38 +39,23 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Services</a>
+              <a class="nav-link py-3 px-0 px-lg-3 text-dark rounded js-scroll-trigger" href="#portfolio">Our Offer</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link py-3 px-0 px-lg-3 text-dark rounded js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link py-3 px-0 px-lg-3 text-dark rounded js-scroll-trigger" href="#contact">Testimonies</a>
             </li>
 
-            @if (Route::has('login'))
-                
-
-                    @auth
-                    <li class="nav-item mx-0 mx-lg-1"> 
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ url('/home') }}">Home</a>
-                    </li>
-                    @else
-
-                         <li class="nav-item mx-0 mx-lg-1">
-                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('login') }}">Login</a>
-                         </li>
-                         <li  class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ route('register') }}">Register</a></li>
-                    @endauth
-                
-            @endif
+            
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+    <header class="masthead text-white text-center" style="background-color: #0b3800;">
       <div class="container col-lg-6">
             <div>
             @if (session('error'))
@@ -78,7 +63,7 @@
             @endif
                 <form action="{{ route('booking.show') }}" method="GET">
                 <div>
-                    <h2>Search For Your Choice Destinaton Today</h2>
+                    <h5>Travel To Your Choice Destinaton Today</h5>
                 </div>
                     <div class="row">
                     
@@ -116,144 +101,117 @@
                     
                      
                 </form>
-            </div>
-        <h3 class="text-uppercase mb-0">Findtrans</h3>
-        <hr class="star-light">
-        <h5 class="font-weight-light mb-0">Helping You see The World </h5>
+            </div><br>
+        <h3 class="text-uppercase mb-0">Findtrans</h3> <br>
+      
+        <p class="font-weight-light mb-0">Helping You see The World </p>
       </div>
     </header>
 
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Facilities And Services</h2>
-        <hr class="star-dark mb-5">
+        <h3 class="text-center text-uppercase text-secondary mb-0">What WE Offer</h3><br>
+        
         <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Comfort</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/seat.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/seat.jpg')}}" alt="" width="500px" height="500px">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Entertainment System</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/tvc.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/tvc.jpg')}}" alt="" width="500px" height="500px">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Leg Room</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/Leg Room.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/Leg Room.jpg')}}" alt="" width="500px" height="500px">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Power Outlet</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/poweroutlet.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/poweroutlet.jpg')}}" alt="" width="500px" height="500px">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Bus Cooling System</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/ac.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/ac.jpg')}}" alt="" width="500px" height="500px">
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+            <a class="portfolio-item d-block mx-auto" href="">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
+                  <span>Extra Luggage Space</span>
                 </div>
               </div>
-              <img class="img-fluid" src="{{asset('img/portfolio/luggage.jpg')}}" alt="">
+              <img class="img-fluid" src="{{asset('img/portfolio/luggage.jpg')}}" alt=""width="500px" height="500px">
             </a>
           </div>
         </div>
       </div>
     </section>
+  
 
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <section class=" text-white mb-0" id="about"  style="background-color: #0b3800;>
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
-        <hr class="star-light mb-5">
+        <h3 class="text-center text-uppercase text-white">About</h3><br>
+        
         <div class="row">
           <div class="col-lg-4 ml-auto">
-            <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+            <p class="lead">Findtrans commenced operations of intercity and intracity transportation in 2018 with the sole aim of improving the ease of travelling from one location to another</p>
           </div>
           <div class="col-lg-4 mr-auto">
-            <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+            <p class="lead">Because we know how difficult moving from one location to another can be, our customers comfort is our priority</p>
           </div>
         </div>
        
       </div>
-    </section>
+      </section>
+   
 
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
-        <hr class="star-dark mb-5">
+        <h3 class="text-center text-uppercase text-secondary mb-0">Featured Testimonial</h3> <br>
+        
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br>
-              <div id="success"></div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
-              </div>
-            </form>
+          <div class="col-lg-5 ml-auto">
+          <img src="{{asset('images/icon/avatar-01.jpg')}}" width="150px" height="150px" style="border-radius: 80px" class="text-center">
+            <p class="lead">Ever since I dicovered Findtras, Booking for bus tickets has never gotten athisn easy. Thank you Findtrans</p>
+            <p class="text-center">...Jonny</p>
+          </div>
+          <div class="col-lg-5 mr-auto">
+          <img src="{{asset('images/icon/avatar-01.jpg')}}" width="150px" height="150px" style="border-radius: 80px" class="text-center">
+            <p class="lead">Ever since I dicovered Findtras, Booking for bus tickets has never gotten athisn easy. Thank you Findtrans</p>
+            <p class="text-center">...Jonny</p>
           </div>
         </div>
       </div>
@@ -265,43 +223,40 @@
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
+            <p class="lead mb-0">22 John Daniel Drive
+              <br>Lagos</p>
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://facebook.com">
                   <i class="fab fa-fw fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://goggle.com">
                   <i class="fab fa-fw fa-google-plus-g"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://twitter.com">
                   <i class="fab fa-fw fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://linkedin.com">
                   <i class="fab fa-fw fa-linkedin-in"></i>
                 </a>
               </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
+              
             </ul>
           </div>
           <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            <h4 class="text-uppercase mb-4">Findtrans</h4>
+            <p class="lead mb-0">Holidays and vacation destinaion within reach.
+              <span>Helping you see the world</span></p>
+              <p class="lead mb-0">Contact : 09011223425</p>
           </div>
         </div>
       </div>
@@ -309,7 +264,7 @@
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2018</small>
+        <small>Copyright &copy; Findtrans 2018</small>
       </div>
     </div>
 

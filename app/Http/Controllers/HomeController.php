@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Findtrans\Addroute;
 
 use Findtrans\Trip;
+use Findtrans\Bus;
 class HomeController extends Controller
 {
     /**
@@ -26,6 +27,7 @@ class HomeController extends Controller
     public function index()
 
     {
+        $bus = Bus::all();
         $search = request()->search;
 
         if($search) {
@@ -33,9 +35,10 @@ class HomeController extends Controller
                     ->orWhere('to', 'LIKE', '%'. $search . '%')
                     ->paginate(4);
         } else {
-            $trips = Trip::latest()->paginate(5);            
+            $trips = Trip::latest()->paginate(5);           
         }
-        return view('home')->with('trips', $trips);
+        return view('home')->with('trips', $trips)
+                            ->with('buses', $bus);
                             
 
        

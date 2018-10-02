@@ -97,46 +97,46 @@
 
 
 
-<div class="row m-t-150 container justify-content-center">
-                            <div class="col-md-10">
-                                <!-- DATA TABLE-->
-                                <div class="table-responsive m-b-10">
+	<div class="row m-t-150 container justify-content-center">
+        <div class="col-md-10">
+            <!-- DATA TABLE-->
+                <div class="table-responsive m-b-10">
                                
-                                    <table class="table table-borderless table-data3">
-                                        <thead>
-                                            <tr>
-                                                <th>Travelling From</th>
-                                                <th>Travelling To</th>
-                                                <th> Departure Time</th>
-                                                <th> Departure Date</th>
-                                                <th> Price</th>
-                                                <th> Available Tickets</th>
-                                                <th>Action</th>
+                    <table class="table table-borderless table-data3">
+                        <thead>
+                            <tr>
+                                <th>Travelling From</th>
+                                <th>Travelling To</th>
+                                <th> Departure Time</th>
+                                <th> Departure Date</th>
+                                <th> Price</th>
+                                <th> Available Tickets</th>
+                                <th>Action</th>
                                                 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($trips as $trip)
-                                            <tr>
-                                                <td>{{$trip->from}}</td>
-                                                <td>{{$trip->to}}</td>
-                                                <td>{{$trip->departure_time}}</td>
-                                                <td>{{$trip->departure_date}}</td>
-                                                <td></td>
-                                                <td>{{$trip->tickets}}</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($trips as $trip)
+                            <tr>
+                                <td>{{$trip->from}}</td>
+                                <td>{{$trip->to}}</td>
+                                <td>{{$trip->departure_time}}</td>
+                                <td>{{$trip->departure_date}}</td>
+                                <td>{{$trip->price}}</td>
+                                <td>{{$trip->tickets}}</td>
 
-                                                <td> <a href="#openModal" class="btn btn-info"> Book</a> </td>
+                                <td> <a href="#openModal" class="btn btn-info" > Book</a> </td>
                                                 
-                                            </tr>
-                                        @endforeach
+                            </tr>
+                        @endforeach
                                             
-                                        </tbody>
-                                    </table>
+                        </tbody>
+                </table>
                                 
-                                </div>
-                                <!-- END DATA TABLE-->
-                            </div>
-                        </div>
+            </div>
+            <!-- END DATA TABLE-->
+        </div>
+	</div>
 
 
  
@@ -146,15 +146,15 @@
 		<a href="#close" title="Close" class="close">X</a>
 		<h3>Booking Details</h3>
 		<div class="col-md-10">
-		@if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+			@if ($errors->any())
+	            <div class="alert alert-danger">
+	                <ul>
+	                    @foreach ($errors->all() as $error)
+	                        <li>{{ $error }}</li>
+	                    @endforeach
+	                </ul>
+	            </div>
+	        @endif
 			<form action="{{ route('booking.store') }}" method="POST">
 				@csrf
 				<div class="form-group">
@@ -176,6 +176,8 @@
 				<label for="tickets"> No Of Ticket</label>
 					<input type="text" name="tickets" class="form-control">
 				</div>
+
+				
 
 				<div class="form-group text-center">
 				

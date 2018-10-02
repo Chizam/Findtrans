@@ -31,7 +31,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <h2>FINDTRANS</h2>
+                                <h2 style="color: #fff;">FINDTRANS</h2>
                             </a>
                         </div>
                         <div class="login-form">
@@ -68,8 +68,10 @@
                                     </label>
                                 </div>
 
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Log in
+                                <div class="text-center">
+                                <button class="au-btn  au-btn--green m-b-20" type="submit">Log in
                                 </button>
+                                </div>
                                 <!-- <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>

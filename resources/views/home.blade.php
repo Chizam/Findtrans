@@ -66,7 +66,37 @@
                                     </div>
                                 </div>
 
+                
+<div class="row m-t-150 container justify-content-center">
+                            <div class="col-md-10">
+                                <!-- DATA TABLE-->
+                                <div class="table-responsive m-b-10">
+                               
+                                    <table class="table table-borderless table-data3">
+                                        <thead>
+                                            <tr>
+                                                <th>Bus</th>
+                                                <th>Driver</th>
+                                                
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($buses as $bus)
+                                            <tr>
+                                                <td>{{$bus->bus}}</td>
+                                                <td>{{$bus->driver}}</td>
+                                                
+                                            </tr>
+                                        @endforeach
+                                            
+                                        </tbody>
+                                    </table>
                                 
+                                </div>
+                                <!-- END DATA TABLE-->
+                            </div>
+                        </div>     
             </div>
 
         </div>

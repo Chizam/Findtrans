@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/add-route','AddrouteController@show');
+
 
 
 Route::post('/add-route','AddrouteController@add_journey');
@@ -28,6 +28,7 @@ Route::prefix('admin')
     ->group(function() {
     Route::resource('cities', 'CitiesController');
     Route::resource('trips', 'TripsController');
+    Route::resource('buses', 'BusesController');
     Route::get('search', 'TripsController@search')->name('trips.search'); 
 });
 

@@ -5,6 +5,7 @@ namespace Findtrans\Http\Controllers;
 use Findtrans\Booking;
 use Findtrans\Trip;
 use Findtrans\City;
+use Findtrans\Notification\TestEmail;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -62,20 +63,38 @@ class BookingController extends Controller
 
 
         $cities =City::all();
+        $trips =Trip::all();
         $booking = new Booking;
 
+        //$id = $request->id;
         $booking->name = $request->name;
         $booking->email = $request->email;
         $booking->phone = $request->phone;
         $booking->tickets = $request->tickets;
         
 
+         /*$booking->notify(new TestEmail());*/
 
+         //$ver = $trips->tickets->get() - $booking->tickets->get();
+         /*$trips =Trip::find($id);*/
+         
+         /*( $trips->tickets)- ( $booking->tickets)*/
 
         $booking->save();
+        /*dd( ($trips->id->tickets) - ( $booking->tickets));*/
+
+         /*$ver = $trips->tickets - $booking->tickets*/
+
+
 
         return view('welcome')->with('cities', $cities);
         /*return redirect()->back()->with('status', 'new trip successfully added!');*/
+
+        /* $book = new Booking();
+            $book->email = request()->email;   // This is the email you want to send to.
+            $book->notify(new TestEmail());
+*/
+            
     }
 
     /**
